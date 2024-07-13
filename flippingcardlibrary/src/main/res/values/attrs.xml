@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FlippingCardView">
+
+        <attr name="flipDuration" format="integer" />
+        <attr name="elevation" format="dimension"/>
+        <attr name="cardRadius" format="dimension"/>
+        <attr name="padding" format="dimension"/>
+        <attr name="cardBackgroundColor" format="color"/>
+        <attr name="frontImage" format="reference"/>
+        <attr name="backImage" format="reference"/>
+        <attr name="flipStyle" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="withElevation" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>
