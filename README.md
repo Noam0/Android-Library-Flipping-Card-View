@@ -22,7 +22,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.YourUsername:flippingcardlibrary:x.y.z'
+    implementation 'com.github.noam0:flippingcardlibrary:x.y.z'
 }
 
 
