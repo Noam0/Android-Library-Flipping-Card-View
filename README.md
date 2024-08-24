@@ -6,7 +6,7 @@
 
 ### Demo
 
-<img src="https://github.com/user-attachments/assets/420e6c90-a06d-4a16-905e-aafd3b37d95f" width="230" height="400" alt="finalgif">
+<img src="https://github.com/user-attachments/assets/aa024633-cf8d-4f8b-8448-929a851228f7" width="260" height="430" alt="finalgif">
 
 ## Setup
 
