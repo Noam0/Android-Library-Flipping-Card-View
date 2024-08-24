@@ -6,7 +6,7 @@
 
 ### Demo
 
-<img src="https://github.com/user-attachments/assets/f48987b5-0330-4e8d-98cb-aea41acabae0" width="230" height="400" alt="finalgif">
+<img src="https://github.com/user-attachments/assets/420e6c90-a06d-4a16-905e-aafd3b37d95f" width="230" height="400" alt="finalgif">
 
 ## Setup
 
@@ -44,19 +44,31 @@ dependencies {
 - **Usage**: Use this attribute to set the image displayed on the back of the card. This is the image shown when the card is flipped down.
 
 ### `flipStyle`
-- **Description**: Determines the style of the flip animation. This attribute can enhance the interactivity of the card by defining how it flips between the front and back images.
-- **Type**: String
-- **Options**:
-  - `"normal"`: A straightforward flip without additional effects.
-  - `"withElevation"`: Flips with an elevation effect, creating a shadow that simulates depth.
-- **Example**: `app:flipStyle="withElevation"`
-- **Usage**: This attribute allows you to choose the visual style of the flipping animation, making the card flip more dynamic and visually appealing.
+- **Description**: Determines the style of the flip animation. This attribute enhances the interactivity of the card by defining how it flips between the front and back images.
+- **Type**: Enum
+### Available `flipStyle` Options:
+
+- **rotation**: A straightforward flip without additional effects.
+- **fade**: A smooth fade-out and fade-in transition between the front and back images.
+- **zoomInFlip**: The card zooms in to disappear, then zooms out to reveal the other side.
+- **slideRight**: The card slides to the right and flips to reveal the other side.
+- **slideLeft**: The card slides to the left and flips to reveal the other side.
+- **pendulumSlide**: The card swings like a pendulum before flipping.
+- 
+### `Example`
+- `app:flipStyle="rotation"`
+- `app:flipStyle="fade"`
+- `app:flipStyle="zoomInFlip"`
+- `app:flipStyle="slideRight"`
+- `app:flipStyle="slideLeft"`
+- `app:flipStyle="pendulumSlide"`
+- **Usage**: This attribute allows you to choose from a variety of flip styles, making the card animation more dynamic and suited to your app's design.
 
 
 
+## How To Use:
 
-<h1>How To Use:</h1>
-<h3>Integrate FlippingCardView into your layout XML:</h3>
+### Integrate `FlippingCardView` into your layout XML:
 
 ```xml
 <com.example.flippingcardlibrary.FlippingCardView
@@ -64,7 +76,7 @@ dependencies {
     android:layout_width="150dp"
     android:layout_height="200dp"
     app:cardRadius="10dp"
-    app:flipStyle="withElevation"
+    app:flipStyle="rotation" <!-- Set the flip style here -->
     app:frontImage="@drawable/front_image"
     app:backImage="@drawable/back_image"
     android:layout_margin="8dp" />
@@ -77,4 +89,19 @@ dependencies {
 FlippingCardView flippingCardView = findViewById(R.id.flippingCardView);
 flippingCardView.setFlipDuration(300); // Duration in milliseconds
 flippingCardView.flipCard(); // Trigger the flip animation
+```
+
+
+### Customizing the Animation Duration
+
+You can modify the duration of the flip animation using the `setFlipDuration` method. Here's an example of how to set the duration to 300 milliseconds:
+
+```java
+flippingCardView1.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        flippingCardView1.setFlipDuration(300); // Set the flip duration to 300ms
+        flippingCardView1.flipCard(); // Trigger the flip animation
+    }
+});
 ```
